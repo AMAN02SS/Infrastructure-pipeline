@@ -80,7 +80,7 @@ jobs:
         uses: azure/login@v2
         with:
           client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenent-id: ${{ vars.AZURE_TENENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENENT_ID }}
           subscription-id: ${{ vars.SUBSCRIPTION_ID }}
 
       - name: Initialize Terraform remote backend
@@ -138,7 +138,7 @@ jobs:
         uses: azure/login@v2
         with:
           client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenent-id: ${{ vars.AZURE_TENENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENENT_ID }}
           subscription-id: ${{ vars.SUBSCRIPTION_ID }}
 
       - name: Initialize Terraform remote backend
