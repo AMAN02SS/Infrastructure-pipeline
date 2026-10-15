@@ -14,7 +14,7 @@ permission:
   contents: read
 
 jobs:
-  static-check:
+  static-checks:
     name: Terraform Static Checks
     run-on: ubuntu-latest
 
@@ -50,7 +50,7 @@ jobs:
   terraform-plan:
     name: terraform plan
     run-on: ubuntu-latest
-    needs: static-check
+    needs: static-checks
 
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
@@ -158,3 +158,4 @@ jobs:
 
       - name: Apply saved terraform plan
         run: terraform apply -input=false tfplan
+
