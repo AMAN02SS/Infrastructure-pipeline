@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------
+# Terraform (.gitignore)
+# ------------------------------------------------------------------------
+
+# Local .terraform directory (contains downloaded plugins and modules)
+**/.terraform/*
+
+# .tfstate files (Contains sensitive infrastructure data and secrets. 
+# Use a remote backend like AWS S3, Azure Blob, or HashiCorp Cloud instead!)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files (They often contain passwords, tokens, and keys)
+*.tfvars
+*.tfvars.json
+
+# Ignore override files (used for local-only testing adjustments)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
