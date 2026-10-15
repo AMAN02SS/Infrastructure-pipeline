@@ -55,6 +55,7 @@ jobs:
     name: terraform plan
     runs-on: ubuntu-latest
     needs: static-checks
+    environment: development
 
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
